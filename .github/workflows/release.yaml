@@ -20,8 +20,8 @@ jobs:
       - name: Prepare git
         run: |
           git config --global core.autocrlf false
-          git config --global user.email '121622595+jeroen[bot]@users.noreply.github.com'
-          git config --global user.name  'Jeroen (via CI)'
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions[bot]"
 
       - uses: msys2/setup-msys2@v2
 
