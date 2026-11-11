@@ -28,7 +28,6 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-          repository: waiteb5/bundles
 
       - name: Check UCRT64 package version
         shell: msys2 {0}
@@ -47,5 +46,5 @@ jobs:
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
-          tag_name: ${{ github.event.inputs.package }}-${{ steps.bundle.outputs.version }}
+          tag_name: waiteb5-${{ github.event.inputs.package }}-${{ steps.bundle.outputs.version }}
           files: dist/*.xz
