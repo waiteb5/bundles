@@ -29,6 +29,12 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Check UCRT64 package version
+        shell: msys2 {0}
+        run: |
+          pacman -Syy --noconfirm
+          pacman -Si mingw-w64-ucrt-x86_64-${{ github.event.inputs.package }}
+
       - id: bundle
         name: Create bundle
         shell: msys2 {0}
