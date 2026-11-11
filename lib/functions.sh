@@ -88,8 +88,6 @@ download_libs(){
 create_bundles() {
   prepare_pacman
   arch="ucrt-x86_64" download_libs
-  arch="clang-x86_64" download_libs
-  arch="clang-aarch64" download_libs
 
   # Set success variables
   if [ "$GITHUB_OUTPUT" ]; then
